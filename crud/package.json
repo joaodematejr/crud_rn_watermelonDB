@@ -8,8 +8,14 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@nozbe/watermelondb": "^0.14.1",
+    "@nozbe/with-observables": "^1.0.5",
+    "jsc-android": "^241213.1.0",
     "react": "16.8.6",
-    "react-native": "0.60.5"
+    "react-native": "0.60.5",
+    "react-native-gesture-handler": "^1.4.1",
+    "react-native-screens": "^1.0.0-alpha.23",
+    "react-navigation": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
