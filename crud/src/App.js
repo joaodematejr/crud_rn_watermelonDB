@@ -8,12 +8,24 @@ import {
   Text,
 } from 'react-native';
 
+import {Database} from '@nozbe/watermelondb';
+
+import Usuario from './models/Usuario';
+
+const database = new Database({
+  modelClasses: [Usuario],
+});
+
 class App extends Component {
+  addUser = async () => {
+    await this.props.post.addUser('comment');
+  };
+
   render() {
     return (
       <Fragment>
         <StatusBar barStyle="dark-content" />
-        <SafeAreaView style={{flex: 1, backgroundColor: '#F5F5F5'}}>
+        <SafeAreaView style={styles.view}>
           <TextInput
             autoCapitalize="none"
             autoCompleteType="email"
@@ -77,6 +89,10 @@ const styles = StyleSheet.create({
     color: '#FFF',
     fontWeight: 'bold',
     fontSize: 16,
+  },
+  view: {
+    flex: 1,
+    backgroundColor: '#F5F5F5',
   },
 });
 
